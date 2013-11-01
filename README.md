@@ -4,7 +4,7 @@ ember-model-batch
 Batch multiple model requests into a single ajax call (ember-data or ember-model) using an `Ember.Mixin` with your API adapter. (Usually `DS.RESTAdapter` or `Ember.RESTAdapter`)
 
 ### Ember Data Example
-```
+```javascript
 App.ApplicationAdapter = DS.RESTAdapter.extend(Ember.AdapterBatchMixin, {
 	namespace: '/api/v1',
 	batch: function (requests) {
@@ -14,7 +14,7 @@ App.ApplicationAdapter = DS.RESTAdapter.extend(Ember.AdapterBatchMixin, {
 ```
 
 ### Ember Model Example
-```
+```javascript
 Ember.RESTAdapter.reopen(Ember.AdapterBatchMixin, {
 	batch: function (requests) {
 		// make your single API call
@@ -29,7 +29,7 @@ This method will get called whenever multiple models are being synced to the ser
 
 Request argument format:
 
-```
+```javascript
 [{
 	// The adapter's original ajax() method arguments
 	args: <Arguments>,
