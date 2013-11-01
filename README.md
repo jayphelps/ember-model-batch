@@ -1,7 +1,7 @@
 ember-model-batch
 =================
 
-Batch multiple model requests into a single ajax call (ember-data or ember-model) using an `Ember.Mixin` with your API adapter. (Usually `DS.RESTAdapter` or `Ember.RESTAdapter`)
+Batch multiple model requests into a single ajax call (ember-data or ember-model) using the `Ember.AdapterBatchMixin` with your API adapter. (Usually `DS.RESTAdapter` or `Ember.RESTAdapter`)
 
 ### Ember Data Example
 ```javascript
