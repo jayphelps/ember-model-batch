@@ -47,9 +47,7 @@
                     reject: reject
                 });
                 
-                Ember.run.later(function () {
-                    Ember.run.once(adapter, adapter._flushQueue);
-                });
+                Ember.run.scheduleOnce('afterRender', adapter, adapter._flushQueue);
             });
         }
     });
